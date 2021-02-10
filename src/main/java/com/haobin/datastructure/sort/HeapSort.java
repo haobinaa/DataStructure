@@ -68,8 +68,11 @@ public class HeapSort {
 
 
     public static void main(String[] args) {
-        int[] intArr = {100, 908, 1000001, 100, 0, 9999};
-        heapSort1(intArr, intArr.length);
-        Util.print(intArr);
+        String s1 = "hello";
+        String s2 = new String("hello");
+        String s3 = "hel" + "lo";
+        System.out.println(s1 == s2);
+        System.out.println(s1 == s3);
+        System.out.println(s1 == s1.intern());
     }
 }

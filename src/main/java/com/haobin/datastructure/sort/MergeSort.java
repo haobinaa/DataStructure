@@ -11,7 +11,8 @@ public class MergeSort {
 
     public static void mergeSort(int[] array, int low, int high) {
         if (low < high) {
-            int middle = (low + high) / 2;
+            // 防止溢出
+            int middle = low + (high - low) / 2;
             // 归并左边
             mergeSort(array, low, middle);
             // 归并右边
